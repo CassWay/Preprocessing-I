@@ -48,7 +48,69 @@ table {
 	border-spacing: 0;
 }
 
+// Variables
+@main-color: @silver;
+
+@header-text: @tangerine;
+@header-text-hover: @glitter ;
+@header-background: rgba(0, 0, 0, 0.9); 
+@header-text-back-hover: @alice ;
+
+@cta-text: @glitter;
+@cta-btn-hover: @purple;
+@cta-btn-txt: @tangerine;
+
+@contact-form-background: @antique;
+
+@footer-text: @glitter;
+@footer-background: @silver;
+
+// Colors
+@silver: #c2c2c2;
+@tangerine: #f08400;
+@glitter: #e6e8fa;
+@purple: #6d519c; 
+@antique: #FAEBD7;
+@alice:  #ebf3fa;
+@black:  #171717;
+
+// Mixin
+.default-font() {
+	font-family: 'Fira Sans', sans-serif;
+}
+.head() {
+	background: @header-background;
+	color: @header-text;
+}
+
+.heading() {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.darken() {
+	background: rgba(0, 15, 200, .2);
+}
+
+.flex-row() {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column() {
+	display: flex;
+	flex-direction: column;
+}
+
 /* Set every element's box-sizing to border-box */
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -57,6 +119,17 @@ html, body {
 	height: 100%;
 }
 
-// Begin CSS 
+h2 {
+	.heading;
+	font-size: 2.3rem;
+}
 
+h3 {
+	.heading;
+	font-size: 1.8rem;
+}
 
+h4 {
+	.heading;
+	font-size: 1.5rem;
+}
